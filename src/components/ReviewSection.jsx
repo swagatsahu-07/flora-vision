@@ -3,7 +3,7 @@ import ReviewCard from "./ReviewCard";
 import CR1 from "../assets/CR1.png";
 import CR2 from "../assets/CR2.png";
 import CR3 from "../assets/CR3.png";
-import SectionHeading from "./Sectionheading";
+import SectionHeading from "./SectionHeading";
 
 const ReviewSection = () => {
   const reviews = [
