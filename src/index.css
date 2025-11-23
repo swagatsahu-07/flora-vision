@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Scrollbar rules */
+::-webkit-scrollbar { display: none; }
+
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: "InterLocal", sans-serif;
+}
+
+/* Indie Local */
+@font-face {
+  font-family: "IndieLocal";
+  src: url("./assets/fonts/IndieFlower.ttf") format("truetype");
+  font-weight: normal;
+}
+
+/* Inter Local using TTC file */
+@font-face {
+  font-family: "InterLocal";
+  src: url("./assets/fonts/Inter.ttc") format("truetype-collection");
+  font-weight: 400;
+}
+
+@layer utilities {
+  .font-indie {
+    font-family: "IndieLocal", sans-serif !important;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
