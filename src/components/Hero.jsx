@@ -1,35 +1,60 @@
 import React from "react";
-
-import play from "../assets/Polygon2.png"; 
+import play from "../assets/Polygon2.png";
 import HeroProduct from "./HeroProduct";
 import Testimonial from "./Testimonial";
 
 const HeroSection = () => {
   return (
-    <div className="w-full flex items-center justify-between px-12 py-30">
-
-      
-      <div className="flex-1 text-gray-300 pr-10 ">
+    <div
+      className="
+        w-full
+        flex flex-col lg:flex-row
+        items-center lg:items-start
+        justify-between
+        px-6 md:px-12
+        py-20 md:py-30
+        gap-16
+      "
+    >
+      {/* LEFT CONTENT */}
+      <div className="flex-1 text-gray-300 lg:pr-10 text-center lg:text-left">
         
-        <h1 className="text-[102px] font-bold leading-[0.9] mb-2">
+        <h1
+          className="
+            text-[56px] sm:text-[72px] lg:text-[102px]
+            font-bold
+            leading-[0.95] lg:leading-[0.9]
+            mb-4
+          "
+        >
           Earth’s Exhale
         </h1>
 
-        <p className="text-[22px] font-normal mb-2">
+        <p
+          className="
+            text-[18px] sm:text-[20px] lg:text-[22px]
+            font-normal
+            mb-6
+            max-w-2xl
+            mx-auto lg:mx-0
+          "
+        >
           "Earth Exhale" symbolizes the purity and vitality of the Earth's
-          natural <br /> environment and its essential role in sustaining life.
+           natural environment and its
+          essential role in sustaining life.
         </p>
 
-        <div className="flex items-center gap-4">
-          <button className="px-12 py-3 rounded-xl border-2 border-white/70 text-2xl">
+        {/* CTA */}
+        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
+          <button className="px-10 lg:px-12 py-3 rounded-xl border-2 border-white/70 text-lg lg:text-2xl">
             Buy Now
           </button>
 
-          <div className="w-15 h-15 rounded-full border-2 border-white flex items-center justify-center">
-            <img src={play} className="w-5 h-5" alt="" />
+          <div className="w-14 h-14 lg:w-15 lg:h-15 rounded-full border-2 border-white flex items-center justify-center">
+            <img src={play} className="w-4 h-4 lg:w-5 lg:h-5" alt="play" />
           </div>
 
-          <span className="font-indie text-[20px]">
+          <span className="font-indie text-[18px] lg:text-[20px]">
             Live Demo
           </span>
         </div>
@@ -37,11 +62,10 @@ const HeroSection = () => {
         <Testimonial />
       </div>
 
-      
-      <div className="transform -translate-y-10">
+      {/* RIGHT PRODUCT */}
+      <div className="transform lg:-translate-y-10">
         <HeroProduct />
       </div>
-
     </div>
   );
 };
